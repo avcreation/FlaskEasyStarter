@@ -117,12 +117,13 @@ def install_requirements(R=""):
         warning_text +=  "- Can't install Flask-SQLAlchemy installation. Please download it and run setup.py.\n"
 
     # Install all your requirements
-    with open("%s" % R, 'r') as requirements:
-        for l in requirements.readlines():
-            flask_install = os.system("pip install %s" % l)
-            if flask_install != 0:
-                warning += 1
-                warning_text += "- Can't install %s  Please download it and run setup.py.\n" % l
+    if R:
+        with open("%s" % R, 'r') as requirements:
+            for l in requirements.readlines():
+                flask_install = os.system("pip install %s" % l)
+                if flask_install != 0:
+                    warning += 1
+                    warning_text += "- Can't install %s  Please download it and run setup.py.\n" % l
 
     # If there were warnings, print them
     if warning > 0:
