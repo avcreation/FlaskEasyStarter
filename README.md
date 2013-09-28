@@ -40,4 +40,4 @@ Else, just do:
 
     flask_starter.py install_requirements -R=<your_file>
 
-This will install all the required package, starting with Flask and Flask-SQLAlchemy.
+This will install all the required packages, starting with Flask and Flask-SQLAlchemy.
