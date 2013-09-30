@@ -81,8 +81,12 @@ def startproject(name, V=""):
     if V:
         virtualenv_install = os.system("pip install virtualenv")
         if virtualenv_install != 0:
-            warning += 1
-            warning_text += "- Can't install virtualenv. Please download it and run setup.py.\n"
+            virtualenv_install = os.system("easy_install virtualenv")
+            if virtualenv_install != 0:
+                warning += 1
+                warning_text += "- Can't install virtualenv. Please download it and run setup.py. Then, create your virtual environment manually.\n"
+            else:
+                os.system("virtualenv %s --system-site-packages" % V)
         else:
             os.system("virtualenv %s --system-site-packages" % V)
 

@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='FlaskEasyStarter',
-    version='1.0',
+    version='1.1',
     author='Alexandre Voiney',
     author_email='dev@avcreation.fr',
     packages=['flask-easy-starter'],
