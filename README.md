@@ -1,5 +1,5 @@
-Flask Easy Starter v1
-=====================
+Flask Easy Starter v1.1
+=======================
 
 A python command line tool to easily start a flask project.
 This script will create the architecture of the Flask project
@@ -43,4 +43,5 @@ Else, just do:
 This will install all the required packages, starting with Flask and Flask-SQLAlchemy.
 
 # TODO #
-Add easy_install support for windows.
+- Add default view
+- Add default template
