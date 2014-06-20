@@ -1,4 +1,4 @@
-Flask Easy Starter v1.1
+Flask Easy Starter v1.2
 =======================
 
 A python command line tool to easily start a flask project.
