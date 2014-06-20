@@ -70,7 +70,13 @@ def startproject(name, V=""):
 
     # Create the views file
     with open("%s/app/views.py" % name, "w") as views:
-        pass
+        views.write("# -*- coding:utf8 -*-\n")
+        views.write("from . import app\n")
+        views.write("# write your views here\n")
+
+        views.write("@app.route(\"/\")\n")
+        views.write("def index():\n")
+        views.write("    return \"Hello World\"\n")
 
     warning = 0
     warning_text = ""

@@ -43,5 +43,4 @@ Else, just do:
 This will install all the required packages, starting with Flask and Flask-SQLAlchemy.
 
 # TODO #
-- Add default view
 - Add default template
