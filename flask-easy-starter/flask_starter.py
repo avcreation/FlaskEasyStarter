@@ -42,6 +42,7 @@ def startproject(name, V=""):
 
     # Write a script to create the database
     with open("%s/db_create.py" % name, "w") as db_create:
+        db_create.write("# -*- coding:utf8 -*-\n")
         db_create.write("from config import SQLALCHEMY_DATABASE_URI\n")
         db_create.write("from app import db\n")
         db_create.write("\n")
@@ -49,12 +50,14 @@ def startproject(name, V=""):
 
     # Write the runserver file
     with open("%s/runserver.py" % name, "w") as run:
+        run.write("# -*- coding:utf8 -*-\n")
         run.write("from app import app\n")
         run.write("\n")
         run.write("app.run(debug = True)\n")
 
     # Write the __init__.py file
     with open("%s/app/__init__.py" % name, "w") as init:
+        init.write("# -*- coding:utf8 -*-\n")
         init.write("from flask import Flask\n")
         init.write("from flask.ext.sqlalchemy import SQLAlchemy\n")
         init.write("\n")
@@ -66,7 +69,7 @@ def startproject(name, V=""):
 
     # Create the models file
     with open("%s/app/models.py" % name, "w") as models:
-        pass
+        models.write("# -*- coding:utf8 -*-\n")
 
     # Create the views file
     with open("%s/app/views.py" % name, "w") as views:
